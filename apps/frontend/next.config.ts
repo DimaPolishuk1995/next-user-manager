@@ -17,6 +17,7 @@ const nextConfig: NextConfig = {
     env: {
         NEXT_PUBLIC_FRONTEND_URL: process.env.NEXT_PUBLIC_FRONTEND_URL,
         NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
+        API_BASE_URL: process.env.API_BASE_URL,
     },
     async rewrites() {
         return isProduction
