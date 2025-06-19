@@ -129,7 +129,7 @@ API_BASE_URL=http://backend:3001
 ### 3 · `apps/backend/.env` (fallback)
 
 ```bash
-DATABASE_URL="mysql://root:root@localhost:3306/mydb"
+DATABASE_URL="mysql://root:root@db:3306/next_user_manager"
 ```
 
 ---
