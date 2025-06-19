@@ -17,7 +17,7 @@ services:
       retries: 20
 
   backend:
-    build: { context: ., dockerfile: apps/backend/Dockerfile }
+    build: apps/backend
     env_file: .env
     environment:
       PORT: ${BACKEND_PORT}
@@ -29,7 +29,7 @@ services:
         condition: service_healthy
 
   frontend:
-    build: { context: ., dockerfile: apps/frontend/Dockerfile }
+    build: apps/frontend
     env_file: .env
     environment:
       PORT: ${FRONTEND_PORT}

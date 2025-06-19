@@ -3,7 +3,7 @@ MAX_ATTEMPTS=10
 SLEEP_SECONDS=3
 
 i=1
-until pnpm --filter backend exec prisma db push --schema=prisma/schema.prisma; do
+until pnpm prisma db push --schema=prisma/schema.prisma; do
   if [ "$i" -ge "$MAX_ATTEMPTS" ]; then
     echo "Database still unreachable after $MAX_ATTEMPTS attempts – giving up." >&2
     exit 1
@@ -13,6 +13,6 @@ until pnpm --filter backend exec prisma db push --schema=prisma/schema.prisma; d
   sleep "$SLEEP_SECONDS"
 done
 
-pnpm --filter backend exec ts-node prisma/seed.ts || true
+pnpm ts-node prisma/seed.ts || true
 
-exec node apps/backend/dist/src/main.js
+exec node dist/src/main.js

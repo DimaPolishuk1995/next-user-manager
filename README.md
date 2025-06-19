@@ -249,16 +249,16 @@ Components are placed in `src/components/ui/*` and Tailwind config is updated au
 
 ## Demo Assets (placeholders)
 
-| Type       | Path                                                | Notes           |
-|------------|-----------------------------------------------------|-----------------|
-| Screenshot | ![Main Users Page](docs/images/main-view.png)       | Main Users page |
-| Screencast | ![Create User](docs/images/create-user.png)         | Create User     |
-| Screencast | ![Edit User](docs/images/edit-user.png)             | Edit User       |
-| Screencast | ![Delete User](docs/images/delete-user.png)         | Delete User     |
-| Screencast | ![Delete ALL](docs/images/delete-all.png)           | Delete ALL      |
-| Screencast | ![Sorting](docs/images/sorting.png)                 | Sorting         |
-| Screencast | ![Validation](docs/images/validation.png)           | Validation      |
-| Screencast | ![Tooltip](docs/images/tooltip.png)                 | Tooltip         |
+| Type       | Path                                          | Notes           |
+|------------|-----------------------------------------------|-----------------|
+| Screenshot | ![Main Users Page](docs/images/main-view.png) | Main Users page |
+| Screencast | ![Create User](docs/images/create-user.png)   | Create User     |
+| Screencast | ![Edit User](docs/images/edit-user.png)       | Edit User       |
+| Screencast | ![Delete User](docs/images/delete-user.png)   | Delete User     |
+| Screencast | ![Delete ALL](docs/images/delete-all.png)     | Delete ALL      |
+| Screencast | ![Sorting](docs/images/sorting.png)           | Sorting         |
+| Screencast | ![Validation](docs/images/validation.png)     | Validation      |
+| Screencast | ![Tooltip](docs/images/tooltip.png)           | Tooltip         |
 
 Replace placeholders with real media before publishing.
 
@@ -270,7 +270,7 @@ Replace placeholders with real media before publishing.
 |-------------------------------------------|---------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
 | **Database (local MySQL outside Docker)** | `DATABASE_URL="mysql://root:root@localhost:3306/next_user_manager" pnpm run db:reset` | Drop the schema and recreate an empty DB (no seed).                          |
 |                                           | `DATABASE_URL="mysql://root:root@localhost:3306/next_user_manager" pnpm run db:dev`   | Full bootstrap: reset -> migrate dev -> seed -> generate Prisma client.      |
-| **Backend (NestJS)**                      | `pnpm --filter backend run start:dev`                                                 | Hot-reload backend on [http://localhost:3001](http://localhost:3001).        |
-| **Frontend (Next.js)**                    | `pnpm --filter frontend run dev`                                                      | Starts Next.js dev server on [http://localhost:3000](http://localhost:3000). |
+| **Backend (NestJS)**                      | `pnpm run start:dev`                                                                  | Hot-reload backend on [http://localhost:3001](http://localhost:3001).        |
+| **Frontend (Next.js)**                    | `pnpm run dev`                                                                        | Starts Next.js dev server on [http://localhost:3000](http://localhost:3000). |
 
 Tip: the root-level `pnpm run dev` command spins up the whole stack via Docker Compose if you prefer containers.
