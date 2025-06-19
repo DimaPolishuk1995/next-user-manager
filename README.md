@@ -78,7 +78,6 @@ pagination & sorting**, shadcn UI, form validation with **Zod**, and API introsp
 
 ### Tooling
 
-* **pnpm workspaces**
 * ESLint 9 + Prettier 3, strict TS
 * **Docker Compose**
 
@@ -93,7 +92,7 @@ pagination & sorting**, shadcn UI, form validation with **Zod**, and API introsp
 │   └── frontend/  # Next.js app     (port 3000)
 ├── docker-compose.yml
 ├── .env           # root env for compose
-└── pnpm-workspace.yaml
+└──
 ```
 
 ---
