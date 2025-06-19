@@ -1,0 +1,25 @@
+[project]
+name = "next-user-manager"
+
+[plugins.mysql]
+plan = "free"
+
+[[services]]
+name = "backend"
+root = "apps/backend"
+dockerfile = "Dockerfile"
+restart = "on-failure"
+
+  [services.env]
+  PORT = "3001"
+  DATABASE_URL = "mysql://{{MYSQLUSER}}:{{MYSQLPASSWORD}}@{{MYSQLHOST}}:{{MYSQLPORT}}/{{MYSQLDATABASE}}"
+
+[[services]]
+name = "frontend"
+root = "apps/frontend"
+dockerfile = "Dockerfile"
+restart = "on-failure"
+
+  [services.env]
+  PORT = "3000"
+  NEXT_PUBLIC_API_URL = "https://backend.up.railway.app"
