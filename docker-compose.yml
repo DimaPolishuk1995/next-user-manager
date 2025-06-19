@@ -29,7 +29,11 @@ services:
         condition: service_healthy
 
   frontend:
-    build: apps/frontend
+    build:
+      context: apps/frontend
+      args:
+        API_BASE_URL: ${API_BASE_URL}
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL}
     env_file: .env
     environment:
       PORT: ${FRONTEND_PORT}
