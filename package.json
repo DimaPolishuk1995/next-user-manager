@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "docker compose up --build",
     "dev:detach": "docker compose up -d --build",
-    "down": "docker compose down -v"
+    "down": "docker compose down -v",
+    "backend:buikd": "docker build -t backend -f apps/backend/Dockerfile ."
   },
   "devDependencies": {
     "typescript": "^5.8.3"
