@@ -1,0 +1,6 @@
+node_modules
+apps/backend/dist
+apps/frontend/.next
+.pnpm-store
+Dockerfile*
+docker-compose.yml
