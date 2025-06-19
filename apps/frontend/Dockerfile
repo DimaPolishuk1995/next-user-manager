@@ -1,6 +1,10 @@
 # syntax=docker.io/docker/dockerfile:1
 
 FROM node:18-alpine AS base
+ARG API_BASE_URL
+ARG NEXT_PUBLIC_API_URL
+ENV API_BASE_URL=${API_BASE_URL}
+ENV NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
 
 # Install dependencies only when needed
 FROM base AS deps
