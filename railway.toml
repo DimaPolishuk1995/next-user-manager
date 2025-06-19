@@ -16,10 +16,9 @@ restart = "on-failure"
 
 [[services]]
 name = "frontend"
-root = "apps/frontend"
-dockerfile = "Dockerfile"
+root = "."
+dockerfile = "apps/frontend/Dockerfile"
 restart = "on-failure"
-
   [services.env]
   PORT = "3000"
   NEXT_PUBLIC_API_URL = "https://backend.up.railway.app"
