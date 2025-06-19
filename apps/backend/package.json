@@ -19,8 +19,8 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "prisma:merge": "ts-node prisma/merge-schema.ts",
-    "db:dev": "pnpm run prisma:merge && prisma migrate dev --name auto --schema=prisma/schema.prisma && pnpm exec ts-node prisma/seed.ts && prisma generate --schema=prisma/schema.prisma",
-    "db:deploy": "pnpm run prisma:merge && prisma migrate deploy --schema=prisma/schema.prisma && prisma generate --schema=prisma/schema.prisma",
+    "db:reset": "prisma migrate reset --schema=prisma/schema.prisma --force --skip-seed",
+    "db:dev": "pnpm run db:reset && pnpm run prisma:merge && prisma migrate dev --name auto --schema=prisma/schema.prisma && pnpm exec ts-node prisma/seed.ts && prisma generate --schema=prisma/schema.prisma",
     "prisma:generated": "pnpm run prisma:merge && pnpm exec prisma generate --schema=prisma/schema.prisma",
     "seed": "ts-node prisma/seed.ts"
   },
