@@ -6,8 +6,8 @@ plan = "free"
 
 [[services]]
 name = "backend"
-root = "apps/backend"
-dockerfile = "Dockerfile"
+root = "."
+dockerfile = "apps/backend/Dockerfile"
 restart = "on-failure"
 
   [services.env]
